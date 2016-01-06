@@ -1,0 +1,45 @@
+﻿<ion-view view-title="Schedule - {{deviceName}}">
+    <ion-content>
+        <ion-list>
+            <ion-toggle ng-model="schedule.active">Active</ion-toggle>
+
+            <!--<ion-item class="item-divider">Start and End Time</ion-item>-->
+            <div class="item item-button-right">
+                Start Time
+                <ionic-timepicker class="button" input-obj="startDateObject" ng-disabled="!schedule.active">
+                    <button class="button button-balanced">
+                        <standard-time-meridian etime='startDateObject.inputEpochTime'></standard-time-meridian>
+                    </button>
+                </ionic-timepicker>
+            </div>
+            <div class="item item-button-right">
+                End Time
+                <ionic-timepicker class="button" input-obj="endDateObject" ng-disabled="!schedule.active">
+                    <button class="button button-balanced">
+                        <standard-time-meridian etime='endDateObject.inputEpochTime'></standard-time-meridian>
+                    </button>
+                </ionic-timepicker>
+            </div>
+            
+            <ion-item class="item-divider">Days</ion-item>
+
+            <div class="row item">
+                <div class="col"><ion-toggle ng-disabled="!schedule.active" ng-model="schedule.days.Monday">Monday</ion-toggle></div>
+                <div class="col"><ion-toggle ng-disabled="!schedule.active" ng-model="schedule.days.Tuesday">Tuesday</ion-toggle></div>
+            </div>
+            <div class="row">
+                <div class="col"><ion-toggle ng-disabled="!schedule.active" ng-model="schedule.days.Wednesday">Wednesday</ion-toggle></div>
+                <div class="col"><ion-toggle ng-disabled="!schedule.active" ng-model="schedule.days.Thursday">Thursday</ion-toggle></div>
+            </div>
+            <div class="row item">
+                <div class="col"><ion-toggle ng-disabled="!schedule.active" ng-model="schedule.days.Friday">Friday</ion-toggle></div>
+                <div class="col"><ion-toggle ng-disabled="!schedule.active" ng-model="schedule.days.Saturday">Saturday</ion-toggle></div>
+            </div>
+            <div class="row item">
+                <div class="col"><ion-toggle ng-disabled="!schedule.active" ng-model="schedule.days.Sunday">Sunday</ion-toggle></div>
+                <div class="col"></div>
+            </div>
+            <div class="row item"><button class="button button-block button-balanced" ng-click="setSchedule(schedule)">Set</button></div>           
+        </ion-list>
+    </ion-content>
+</ion-view>

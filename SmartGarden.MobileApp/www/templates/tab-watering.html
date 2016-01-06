@@ -1,0 +1,11 @@
+<ion-view view-title="Watering">
+    <ion-content>
+        <ion-list ng-repeat="device in devices">
+            <ion-toggle class="item" style="pointer-events:initial !important;" ng-model="device.active" ng-change="OnChange(device)">
+                <a class="clickable-item" href="#/tab/watering/{{device.relayid}}">
+                    {{device.deviceName}}
+                </a>
+            </ion-toggle>              
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,8 @@
+{
+  "name": "Smart Garden",
+  "private": true,
+  "dependencies": {
+    "ionic-timepicker": "~0.4.0"
+  },
+  "devDependencies": {}
+}

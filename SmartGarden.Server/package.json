@@ -1,0 +1,15 @@
+{
+  "name": "SmartGarden.Server",
+  "version": "0.0.1",
+  "description": "NodeJS server for SmartGarden",
+  "main": "server.js",
+  "author": {
+    "name": "Vishal Bhatt",
+    "email": "vishal.bhatt@live.com"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",    
+    "rpi-gpio": "^0.7.0"          
+  }
+}
